@@ -1,11 +1,12 @@
 from django.urls import path
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
-    TokenRefreshView,
+    TokenRefreshView,empty_favicon
 )
 from . import views
 
 urlpatterns = [
+    path('favicon.ico', empty_favicon),
     path('', views.index, name='index'),
     path('api/register/', views.RegisterView.as_view(), name='register'),
     path('api/login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),

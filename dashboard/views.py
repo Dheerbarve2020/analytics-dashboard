@@ -6,6 +6,10 @@ from django.db.models.functions import TruncDay
 from .models import User, FeatureClick
 from .serializers import UserSerializer, FeatureClickSerializer
 from django.shortcuts import render
+from django.http import HttpResponse
+
+def empty_favicon(request):
+    return HttpResponse(status=204)
 
 def index(request):
     return render(request, 'dashboard/index.html')
