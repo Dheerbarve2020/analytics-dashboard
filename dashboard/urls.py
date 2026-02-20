@@ -7,6 +7,7 @@ from . import views
 
 urlpatterns = [
     path('favicon.ico', empty_favicon),
+    path('favicon.png', empty_favicon),
     path('', views.index, name='index'),
     path('api/register/', views.RegisterView.as_view(), name='register'),
     path('api/login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
