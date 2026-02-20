@@ -1,0 +1,255 @@
+:root {
+    --bg-color: #0d1117;
+    --text-color: #e6edf3;
+    --primary-color: #238636;
+    --secondary-color: #1f6feb;
+    --card-bg: rgba(22, 27, 34, 0.7);
+    --border-color: #30363d;
+    --accent: #58a6ff;
+    --success: #2ea043;
+    --danger: #da3633;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0 0 1rem 0;
+    font-weight: 600;
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #1158c7;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Authentication Forms */
+.auth-container {
+    max-width: 400px;
+    margin: 6rem auto;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.auth-container .card {
+    border: 1px solid var(--border-color);
+    background: rgba(22, 27, 34, 0.95);
+    padding: 2rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.auth-container h2 {
+    text-align: center;
+    color: var(--accent);
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #8b949e;
+}
+
+input,
+select,
+.date-range-picker {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #010409;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+    /* Fix width overflow */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+input:focus,
+select:focus,
+.date-range-picker:hover {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.3);
+}
+
+.auth-container button {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.75rem;
+    font-weight: 600;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Dashboard Layout */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.filters-bar {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-bottom: 1.5rem;
+}
+
+.chart-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+
+
+/* Date Range Picker Dark Theme Overrides */
+.daterangepicker {
+    background-color: #161b22;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    font-family: inherit;
+}
+
+.daterangepicker .calendars {
+    background-color: #161b22;
+}
+
+.daterangepicker .calendar-table {
+    background-color: #161b22;
+    border: 1px solid var(--border-color);
+}
+
+.daterangepicker td.off,
+.daterangepicker td.off.in-range,
+.daterangepicker td.off.start-date,
+.daterangepicker td.off.end-date {
+    background-color: #0d1117;
+    color: #584c48;
+}
+
+.daterangepicker td.available:hover,
+.daterangepicker th.available:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.daterangepicker td.active,
+.daterangepicker td.active:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.daterangepicker td.in-range {
+    background-color: rgba(31, 111, 235, 0.2);
+    color: var(--text-color);
+}
+
+.daterangepicker .drp-buttons {
+    border-top: 1px solid var(--border-color);
+}
+
+.daterangepicker .ranges li {
+    color: red !important;
+    background-color: #221a16;
+}
+
+.daterangepicker .ranges li:hover {
+    background-color: var(--secondary-color);
+    color: white !important;
+}
+
+.daterangepicker .ranges li.active {
+    background-color: var(--success);
+    color: white !important;
+}
+
+.daterangepicker select.monthselect,
+.daterangepicker select.yearselect {
+    background-color: #010409;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+.daterangepicker .drp-selected {
+    color: var(--text-color);
+}
+
+.btn-primary {
+    background-color: var(--success) !important;
+    border-color: var(--success) !important;
+}
+
+.btn-default {
+    background-color: var(--border-color) !important;
+    color: var(--text-color) !important;
+    border: 1px solid var(--border-color) !important;
+}
