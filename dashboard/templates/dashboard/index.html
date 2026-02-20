@@ -25,7 +25,7 @@
         <section id="auth-section" class="auth-container">
             <div class="card">
                 <h2>Login</h2>
-                <form id="loginForm">
+                <form id="loginForm" method="POST" action="{% url 'token_obtain_pair' %}">
                     <div class="form-group">
                         <label>Username</label>
                         <input type="text" name="username" required>
