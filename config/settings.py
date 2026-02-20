@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-3p9603rxe3k+2+54j+4t=d(%0dqdmwts5$!^3y2$^*o=pzh(aq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['analytics-dashboard-one-theta.vercel.app',
+                   'localhost',
+                 '127.0.0.1']
 
 
 # Application definition
