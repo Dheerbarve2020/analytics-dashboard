@@ -71,7 +71,7 @@ ROOT_URLCONF = 'config.urls'
 #corsheaders settings
 
 CORS_ALLOWED_ORIGINS = [
-    # "https://analytics-dashboard-one-theta.vercel.app",
+    "https://analytics-dashboard-dpac.vercel.app",
     "http://localhost:3000",
     
 ]
