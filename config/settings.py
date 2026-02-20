@@ -36,12 +36,15 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'fallback-secret-key')
 DEBUG = os.environ.get('DJANGO_DEBUG', 'False') == 'True'
 
 # ALLOWED_HOSTS
-ALLOWED_HOSTS = os.environ.get(
-    'DJANGO_ALLOWED_HOSTS', 'localhost,127.0.0.1'
-).split(',')
+# ALLOWED_HOSTS = os.environ.get(
+#     'DJANGO_ALLOWED_HOSTS', 'localhost,127.0.0.1'
+# ).split(',')
 
 # Application definition
-
+ALLOWED_HOSTS = [
+    "analytics-dashboard-kappa-five.vercel.app",
+    ".vercel.app"
+]
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -71,7 +74,7 @@ ROOT_URLCONF = 'config.urls'
 #corsheaders settings
 
 CORS_ALLOWED_ORIGINS = [
-    # "https://analytics-dashboard-dpac.vercel.app",
+    "https://analytics-dashboard-kappa-five.vercel.app/",
     "http://localhost:3000",
     
 ]
