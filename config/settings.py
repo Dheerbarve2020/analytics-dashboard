@@ -72,7 +72,8 @@ ROOT_URLCONF = 'config.urls'
 
 CORS_ALLOWED_ORIGINS = [
     # "https://analytics-dashboard-one-theta.vercel.app",
-    "https://analytics-dashboard-one-theta.vercel.app",
+    "http://localhost:3000",
+    
 ]
 TEMPLATES = [
     {
