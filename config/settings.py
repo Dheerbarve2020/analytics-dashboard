@@ -45,6 +45,13 @@ ALLOWED_HOSTS = [
     "analytics-dashboard-kappa-five.vercel.app",
     ".vercel.app"
 ]
+ALLOWED_HOSTS = ["*"]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.vercel.app",
+]
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -74,10 +81,10 @@ ROOT_URLCONF = 'config.urls'
 #corsheaders settings
 
 CORS_ALLOWED_ORIGINS = [
-    "https://analytics-dashboard-kappa-five.vercel.app/",
+    "https://analytics-dashboard-hwspxkcno-dheer-barves-projects.vercel.app",
     "http://localhost:3000",
-    
 ]
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
