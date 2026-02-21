@@ -1,4 +1,4 @@
-const API_URL = '/api';
+const API_URL = 'https://analytics-dashboard-hwspxkcno-dheer-barves-projects.vercel.app/api';
 let charts = {};
 
 // Global state for date range
